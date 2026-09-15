@@ -94,8 +94,8 @@ export const CORRIDOR_TEXTURES = [
 
 // Standard HTML Image assets (preloaded via new Image() in App.jsx)
 export const IMAGE_ASSETS = [
-    '/images/avatar-thinking.webp',
-    '/images/avatar-hero.webp',
+    // '/images/avatar-thinking.webp', // Missing file - commented out
+    // '/images/avatar-hero.webp', // Missing file - commented out
     '/images/ink-splash.webp',
     '/images/map.webp',
     '/images/map_about_painted.webp',
