@@ -6,6 +6,8 @@ export const sanityClient = createClient({
     dataset: 'production',
     useCdn: true, // `false` dla środowiska dev, `true` dla produkcji żeby było szybciej
     apiVersion: '2024-03-01', // aktualna data API
+    token: undefined, // Public access
+    withCredentials: false, // Disable credentials for CORS
 });
 
 const builder = createImageUrlBuilder(sanityClient);
