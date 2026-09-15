@@ -30,6 +30,19 @@ function serveStaticStartPage() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [serveStaticStartPage(), react(), viteCompression(), generateSeoHtml()],
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'three': ['three'],
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'three-fiber': ['@react-three/fiber', '@react-three/drei', '@react-three/postprocessing']
+        }
+      }
+    }
+  },
   server: {
     proxy: {
       '/sanity-cdn': {

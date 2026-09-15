@@ -1,12 +1,38 @@
 {
   "rewrites": [
     {
-      "source": "/sanity-cdn/(.*)",
-      "destination": "https://cdn.sanity.io/$1"
+      "source": "/sanity-cdn/:path*",
+      "destination": "https://cdn.sanity.io/:path*"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/textures/(.*)",
+      "dest": "/textures/$1"
+    },
+    {
+      "src": "/fonts/(.*)",
+      "dest": "/fonts/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/images/$1"
+    },
+    {
+      "src": "/sounds/(.*)",
+      "dest": "/sounds/$1"
+    },
+    {
+      "src": "/start/(.*)",
+      "dest": "/start/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ],
   "headers": [
